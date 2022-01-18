@@ -46,7 +46,11 @@ public class InsertData {
 			
 			//executeUpdate giving how many row it affected in the database
 			int executeUpdate = prepareStatement.executeUpdate();
-			System.out.println(executeUpdate);
+			if (executeUpdate == 1) {
+				System.out.println("input successfull");
+			} else {
+				System.out.println("input unsucessfull");
+			}
 		}
 		catch (SQLException e) {
 			// TODO Auto-generated catch block
